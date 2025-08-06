@@ -15,10 +15,7 @@ header {
  
 }
 
-.logo img {
-  width: 70px;
-  margin-left: 50px;
-}
+
 
 .menu ul {
   list-style: none;
@@ -167,8 +164,8 @@ header {
   cursor: pointer;
 }
 .logo img{
-  width: 30px;
-  margin-top: -7px;
+  width: 60px;
+  margin-top: 5px;
   margin-right: 48px;
 }
 .active{
