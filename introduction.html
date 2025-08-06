@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My own animated website design</title>
+    <link rel="stylesheet" href="main1.css">
+
+</head>
+<body>
+    <header>
+     <div class="container">
+        <div class="menu">
+            <ul>
+                <li class="logo"><img src="EDA4A240-1CB9-4914-820B-45EBED81DC13.jpg"></li>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="introduction.html"> Introduction</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="signin.html"><span>Sign in</span></a></li>
+            </ul>
+        </div>
+    
+
+
+        <section class="hero">
+          <div class="hero-text">
+            <h1> Ballroom Dancing</h1>
+            <div class="quote">
+              
+              <p><strong>Ballroom Dancing </strong> My Second Profession and Lifelong Passion<br>I’ve been dedicated to ballroom dancing for the past 14 years, and it has become so much more than just a hobby — I proudly call it my second profession. Dancing is a true passion that brings me joy, discipline, and a sense of purpose. Through years of training, performing, and competing, ballroom dancing has become an essential part of who I am. It continues to inspire me every day and drives me to keep growing both as a dancer and as a person.</p>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="slider-wrapper">
+              <div class="slider">
+                <img id="Slide1" src="IMG_8727.jpg" alt="1">
+                <img id="Slide2" src="IMG_8728.jpg" alt="2">
+                <img id="Slide3" src="IMG_8729.jpg" alt="3">
+                <img id="Slide4" src="IMG_8731.jpg" alt="4">
+                <img id="Slide5" src="IMG_8732.jpg" alt="5">
+              </div>
+           
+            </div>
+            <div class="slider-nav">
+              <a href="#Slide1"></a>
+              <a href="#Slide2"></a>
+              <a href="#Slide3"></a>
+              <a href="#Slide4"></a>
+              <a href="#Slide5"></a>
+            </div>
+          </div>
+      
+         
+        </section>
+   
+    
+    <section class="travel">
+      <div class="travel-text">
+        <h1>A Love for Travel</h1>
+        <div class="quote2">
+          <p><strong>A Love for Travel </strong> Besides dancing, I’m passionate about traveling. I’ve already visited 7 countries, and each journey has given me unforgettable experiences and new perspectives. Exploring the world is something that constantly inspires me and fuels my creativity.</p>
+        </div>
+      </div>
+      <div class="travel-image">
+        <div class="slider-wrapper2">
+          <div class="slider2">
+            <img id="Slide-1" src="IMG_8747.jpg" alt="p1">
+            <img id="Slide-2" src="IMG_8748.jpg" alt="p2">
+            <img id="Slide-3" src="IMG_8749.jpg" alt="p3">
+            <img id="Slide-4" src="IMG_8750.jpg" alt="p4">
+            <img id="Slide-5" src="IMG_8751.jpg" alt="p5">
+            <img id="Slide-6" src="IMG_8752.jpg" alt="p6">
+            <img id="Slide-7" src="IMG_8753.jpg" alt="p7">
+            <img id="Slide-8" src="IMG_8618.jpg" alt="p8">
+            <img id="Slide-9" src="IMG_8755.jpg" alt="p9">
+            <img id="Slide-10" src="IMG_8756.jpg" alt="p10">
+            <img id="Slide-11" src="IMG_8757.jpg" alt="p11">
+            <img id="Slide-12" src="IMG_8758.jpg" alt="p12">
+          </div>
+       
+        </div>
+        <div class="slider-nav2">
+          <a href="#Slide-1"></a>
+          <a href="#Slide-2"></a>
+          <a href="#Slide-3"></a>
+          <a href="#Slide-4"></a>
+          <a href="#Slide-5"></a>
+          <a href="#Slide-6"></a>
+          <a href="#Slide-7"></a>
+          <a href="#Slide-8"></a>
+          <a href="#Slide-9"></a>
+          <a href="#Slide-10"></a>
+          <a href="#Slide-11"></a>
+          <a href="#Slide-12"></a>
+        </div>
+      </div>
+
+     
+    </section>
+
+    <section class="why-choose">
+      <h2>Contacts</h2>
+      <div class="cards-container">
+       
+        <div class="card dark-card">
+          <h3>Email</h3>
+          <p>sofayayaaaaa@gmail.com</p>
+        </div>
+    
+        <div class="card dark-card">
+          <h3>Telephone</h3>
+          <p>0993237884</p>
+        </div>
+    </section>
+  </div>
+  </header>
+  <script>
+    const sections = document.querySelectorAll('section');
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target); // убираем наблюдение после показа
+        }
+      });
+    }, {
+      threshold: 0.2 // появление начинается, когда 15% секции видны
+    });
+  
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+   
+
+  
+</html>

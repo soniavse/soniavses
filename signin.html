@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="main3.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Sign In</h2>
+    <form id="signInForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" id="subscribe">
+        <label for="subscribe">Subscribe to communication with the site owner</label>
+      </div>
+      <button type="submit">Sign In</button>
+    </form>
+
+    <div class="output" id="output" style="display:none;"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('signInForm');
+    const output = document.getElementById('output');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // prevent actual form submission
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const subscribe = document.getElementById('subscribe').checked;
+
+      output.style.display = 'block';
+      output.innerHTML = `
+        <h3>Submitted Information:</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Password:</strong> ${'*'.repeat(password.length)}</p>
+        <p><strong>Subscribed:</strong> ${subscribe ? 'Yes' : 'No'}</p>
+      `;
+    });
+  </script>
+</body>
+</html>
