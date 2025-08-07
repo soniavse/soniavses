@@ -136,6 +136,14 @@
   
     sections.forEach(section => observer.observe(section));
   </script>
+     <script>
+      const burger = document.getElementById('burger');
+      const menu = document.querySelector('.menu ul');
+    
+      burger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+    </script>
 </body>
    
 
