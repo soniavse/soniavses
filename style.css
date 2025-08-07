@@ -83,7 +83,7 @@ header {
 }
 
 .quote img {
-  width: 110px;
+  width: 100%;
   height: auto;
   border-radius: 8px;
 }
@@ -128,7 +128,7 @@ header {
 .learn-btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #2e3338; /* Синий фон – можно изменить */
+  background-color: #2e3338; 
   color: white;
   text-decoration: none;
   border: none;
@@ -372,15 +372,199 @@ input:checked+label .description{
 .card[for="c3"]{
   background-image: url('./IMG_9279.jpeg')
 }
-/* Начальное состояние – скрыто и немного сдвинуто вниз */
+
 section {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Когда секция появляется в зоне видимости */
 section.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.burger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #000;
+  padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 999;
+  }
+
+  .menu ul.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .menu ul li {
+    margin: 10px 0;
+  }
+
+  .menu {
+    position: relative;
+  }
+
+  .logo {
+    display: none; 
+  }
+}
+@media (max-width: 768px) {
+  /* Адаптивное меню */
+  .burger {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+    color: #000;
+  }
+
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 999;
+    border-radius: 10px;
+  }
+
+  .menu ul.active {
+    display: flex;
+  }
+
+  .menu ul li {
+    margin: 10px 0;
+  }
+
+  .logo {
+    display: none; 
+  }
+
+  /* Герой секция — вертикально */
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+    max-height: none;
+  }
+
+  .hero-text, .hero-image {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .quote {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    font-size: 16px;
+  }
+
+  .quote img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Карусель карточек */
+  .container2 {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .card {
+    width: 90% !important;
+  }
+
+  .card > .row > .description {
+    width: 100%;
+  }
+
+  /* Mission секция */
+  .mission {
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+  }
+
+  .mission h2 {
+    font-size: 20px;
+  }
+
+  .mission p {
+    font-size: 14px;
+  }
+
+  /* Contacts */
+  .why-choose {
+    max-width: 90%;
+    padding: 30px 15px;
+  }
+
+  .why-choose h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card2 {
+    max-width: 90%;
+    width: 100%;
+  }
+
+  /* Общая адаптация изображений */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+ 
+  .app-text, .app-picture {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .app-text h1, .app-text p {
+    width: 90%;
+    margin: 0 auto 20px;
+  }
+
+  .app-picture img {
+    width: 80%;
+    padding-left: 0;
+    margin: 0 auto;
+  }
 }
