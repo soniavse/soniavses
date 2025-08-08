@@ -276,3 +276,42 @@ header {
 .card2:hover {
     transform: translateY(-5px);
 }
+.burger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #000;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 999;
+  }
+
+  .menu ul.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .menu ul li {
+    margin: 10px 0;
+  }
+  .menu {
+    position: relative;
+  }
+
+  .logo {
+    display: none; 
+  }
+}

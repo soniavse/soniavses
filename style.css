@@ -518,7 +518,7 @@ section.show {
   .menu ul {
     display: none;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #333;
     position: absolute;
     top: 70px;
     left: 0;
